@@ -1,0 +1,15 @@
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+  3xl: 2000px,
+);
+
+@mixin common-media-query($breakpoint) {
+  $max-width: map-get($breakpoints, $breakpoint);
+  @media (max-width: $max-width) {
+    @content;
+  }
+}

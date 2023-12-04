@@ -1,0 +1,197 @@
+@import "./mixins";
+@import "./variables";
+
+// <------------------------------------------>
+//                    Header
+// <------------------------------------------>
+
+.btn-primary {
+  background-color: $red;
+  border: none;
+  &:hover {
+    background-color: $blue;
+  }
+}
+
+.header {
+  color: $white;
+  background-color: $red;
+  .logo a {
+    font-size: 40px;
+    text-decoration: none;
+    font-weight: 600;
+    color: $white;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  .menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      margin-right: 30px;
+      a {
+        color: white;
+        padding: 15px 10px;
+        text-decoration: none;
+      }
+      a:hover {
+        background-color: $dark-red;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .nav-link {
+    float: right;
+    span {
+      display: block;
+      margin-bottom: 6px;
+      width: 24px;
+      height: 2px;
+
+      background-color: $white;
+      border-radius: 0.25rem;
+    }
+  }
+}
+// <------------------------------------------>
+//                    Hero
+// <------------------------------------------>
+
+.hero {
+  background: url("../img/alvin-engler-bIhpiQA009k-unsplash.jpg") no-repeat 0 0;
+  background-size: cover;
+  &-title {
+    font-size: 45px;
+    background-color: $white-opacity;
+    margin: 0;
+    padding: 10px;
+    @include common-media-query(md) {
+      font-size: 30px;
+    }
+  }
+  &-description {
+    @include common-media-query(sm) {
+      font-size: 16px;
+    }
+    font-size: 25px;
+    background-color: $red-opacity;
+    color: $white;
+    padding: 10px;
+  }
+}
+// <------------------------------------------>
+//                    About Us
+// <------------------------------------------>
+.about {
+  &-title {
+    font-size: 30px;
+  }
+  &-border {
+    width: 110px;
+    height: 4px;
+    background-color: $red;
+    text-align: center;
+  }
+
+  &-card {
+    width: 100%;
+    padding: 20px !important;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+      rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    @include common-media-query(md) {
+      max-width: 343px;
+    }
+    img {
+      width: 100%;
+    }
+    &-title {
+      font-size: 30px;
+    }
+    &-content {
+      font-size: 20px;
+    }
+  }
+}
+// <------------------------------------------>
+//                   Testimonials
+// <------------------------------------------>
+.testimonials {
+  background: url("../img/glenn-carstens-peters-P1qyEf1g0HU-unsplash.jpg")
+    no-repeat;
+  background-size: cover;
+  color: white;
+  &-title {
+    font-size: 30px;
+  }
+  &-border {
+    width: 110px;
+    height: 4px;
+    background-color: $red;
+    text-align: center;
+  }
+
+  img {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+  }
+  .author {
+    margin: 0;
+    font-size: 18px;
+    margin-top: 10px;
+    font-weight: 600;
+  }
+}
+// <------------------------------------------>
+//                   News
+// <------------------------------------------>
+.news {
+  &-title {
+    font-size: 30px;
+  }
+  &-border {
+    width: 110px;
+    height: 4px;
+    background-color: $red;
+    text-align: center;
+  }
+  img {
+    width: 100%;
+  }
+  &-card__title {
+    color: $dark-red;
+    font-size: 25px;
+    font-weight: 500;
+    margin: 0;
+  }
+  &-card__date {
+    color: grey;
+  }
+  &-card__readmore {
+    color: $dark-red;
+    font-size: 18px;
+  }
+}
+
+// <------------------------------------------>
+//                    Footer
+// <------------------------------------------>
+.footer {
+  background-color: $red;
+  .menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      a {
+        color: black;
+        margin-bottom: 10px;
+        padding: 15px 10px;
+        text-decoration: none;
+      }
+    }
+  }
+}
